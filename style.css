@@ -1,7 +1,23 @@
+/* fonts */
+@font-face {
+    font-family: CustomFont1;
+    src: url('CustomFont.ttf');
+}
+
+@font-face {
+    font-family: CustomFont2;
+    src: url('CustomFont2.ttf');
+}
+
+
+
 /* default */
 body {
     background: purple;
-  
+    font-family: 'Playfair Display', CustomFont1;
+}
+p {
+    font-family: "Roboto", CustomFont2;
 }
 /* desktop */
 @media (max-width: 2880px) {
