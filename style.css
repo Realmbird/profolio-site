@@ -1,33 +1,157 @@
 /* fonts */
 @font-face {
-    font-family: CustomFont1;
-    src: url('CustomFont.ttf');
+    font-family: CustomFont2;
+    src: url('./Fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
 @font-face {
-    font-family: CustomFont2;
-    src: url('CustomFont2.ttf');
+    font-family: CustomFont1;
+    src: url('./Fonts/Roboto-Black.ttf');
+}
+/* colors */
+:root{
+    --white: #fafafa;
+    --light-blue: #22d3ee;
+    --black: #020617;
+    --purple: #8b5cf6;
+    --green: #16a34a;
+}
+.project-item {
+    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.project-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: 100%; /* Ensures the image takes the full height of its container */
+    object-fit: cover; /* Scales the image to cover its container while maintaining aspect ratio */
+}
+.project-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon {
+    font-size: 2rem;
+}
+.icon-image{
+  height: auto;
+  width: 30px;
 }
 
 
 
 /* default */
 body {
-    background: purple;
+    display: flex;
+    flex-direction: column;
+}
+html {
     font-family: 'Playfair Display', CustomFont1;
 }
-p {
+p { 
     font-family: "Roboto", CustomFont2;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    font-size: 2.5rem;
+}
+#about-me p{
+    font-size: 1.5rem;
+}
+/* removes link decoration*/
+a{
+    text-decoration: none;
+}
+i {
+  font-size: 4rem;
+}
+a > i {
+    font-size: 2rem;
+    
+}
+.section {
+    padding: 20px;
+}
+.projects {
+    padding: 25px 50px 75px
+}
+h3 {
+    font-size: (1.325rem + .9vw);
 }
 /* desktop */
 @media (max-width: 2880px) {
+    body {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        background-color: var(--white);
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .projects-preview {
+        transition: transform .2s ease-in-out .1s,-webkit-transform .2s ease-in-out .1s;
+        border-radius: 5px;
+    }
+    .projects-preview:hover {
+        transform: scale(1.1);
+    }
     
+
+
 }
 /* tablet */
 @media (max-width: 2048) {
+    body {
+        background-color: grey;
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
     
 }
 /* mobile */
 @media (max-width: 750px) {
-    
+    body {
+        background-color: red;
+        margin: 0px;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
 }
